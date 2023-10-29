@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: testdb
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./create.sql:/docker-entrypoint-initdb.d/create.sql
       - ./load-data.sql:/docker-entrypoint-initdb.d/load-data.sql
       - ./quest.sql:/docker-entrypoint-initdb.d/quest.sql    
     healthcheck:
