@@ -10,7 +10,8 @@ services:
       POSTGRES_DB: testdb
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./data.sql:/docker-entrypoint-initdb.d/data.sql    
+      - ./data.sql:/docker-entrypoint-initdb.d/data.sql
+      - ./quest.sql:/docker-entrypoint-initdb.d/quest.sql    
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 5s
