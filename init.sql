@@ -1,6 +1,6 @@
 -- Создание таблицы для хранения данных о продажах товаров.
-CREATE TABLE sales (
-    date DATE,
+CREATE TABLE IF NOT EXISTS sales (
+    date Date,
     category String,
     product String,
     sales_amount Float32,
